@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Introduction
 
 Deploy Helidon on Oracle Container Engine for Kubernetes and Read using Code Card.
@@ -195,4 +194,3 @@ $ `curl -XGET http://NodeExternalIpAddress:NodePort/HelidonMP/Vinodh`
 To fetch customized data as template with user inputs to change title, subtitle, bodytext, icon, color.
 
 $ `curl -XPUT -H "Content-Type: application/json" -d '{"title" : "Howdy", "subtitle", "bodytext" : "My updated Helidon MicroService", "icon": "java"}' http://NodeExternalIpAddress:NodePort/HelidonMP/Helidon`
->>>>>>> 2bee021bd47ff7c7d2a26729eeca3e1e2a92e297
