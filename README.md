@@ -32,10 +32,11 @@ Sign in to the Oracle Cloud Infrastructure (OCI) web console and generate an aut
 
 Remember to copy the generated token. You won’t be able to access it again.
 
-# Log in to the OCIR Docker registry:
+# Log in to the OCIR Docker registry
 $ `docker login -u <username> -p <password> <region-code>.ocir.io`
 	   
 `<region-code>` corresponds to the code for the Oracle Cloud Infrastructure Registry region you're using, as follows:
+
 	1. enter <b>fra</b> as the region code for Frankfurt \
 	2. enter <b>iad</b> as the region code for Ashburn \
 	3. enter <b>lhr</b> as the region code for London \
@@ -54,7 +55,7 @@ $ `docker tag helidon-mp:latest iad.ocir.io/<tenancy-name>/codecard/helidon-mp:l
 
 the local image to tag <repo-name> is optional. It is the name of a repository to which you want to push the image (for example, project01).
 
-# Push the image to the Registry:
+# Push the image to the Registry
 
 $ `docker push <region-code>.ocir.io/<tenancy-name>/<repo-name>/<image-name>:<tag>`
 
