@@ -9,8 +9,8 @@ The path that we will take is as follows:
 1. Deploy maven jar.
 2. [Create OKE Cluster](https://www.oracle.com/webfolder/technetwork/tutorials/obe/oci/oke-full/index.html) in Oracle Cloud Infrastructure.
 3. Build Docker Image File.
-4. Tag & Push to OCIR.
-5. Pull the image from OCIR.
+4. Tag & Push Images to OCIR.
+5. Pull image from OCIR.
 6. Create Service and Deploy on OKE.
 
 # Background
