@@ -14,7 +14,7 @@ RUN apk add --update \
   && rm -rf /var/cache/apk/*
 
 RUN mkdir /app
-#COPY libs /app/libs
+
 COPY helidon-mp-0.0.1-SNAPSHOT.jar /app/
 
 # get node app from git repo
