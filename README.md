@@ -20,10 +20,10 @@ Project Helidon is an open source set of Java libraries used to write microservi
 In this walkthrough we will create a greetings application with bodytext in Helidon, push it to the Oracle Container Registry, deploy it into an Oracle Container Engine for Kubernetes cluster. 
  
 # Build Docker Image
-$ docker build -t helidon-mp .
+$ `docker build -t helidon-mp .`
 
 # Check if images are loaded
-$ docker images
+$ `docker images`
 
 # Push Your Image to OCIR
 Your account must be in the Administrators group or another group that has the REPOSITORY_CREATE permission.
@@ -32,34 +32,32 @@ Sign in to the Oracle Cloud Infrastructure (OCI) web console and generate an aut
 Remember to copy the generated token. You won’t be able to access it again.
 
 # Log in to the OCIR Docker registry:
-$ docker login -u <username> -p <password> <region-code>.ocir.io 
+$ `docker login -u <username> -p <password> <region-code>.ocir.io`
 	   
-?<region-code>? corresponds to the code for the Oracle Cloud Infrastructure Registry region you're using, as follows:
+`<region-code>` corresponds to the code for the Oracle Cloud Infrastructure Registry region you're using, as follows:
 	•enter fra as the region code for Frankfurt
 	•enter iad as the region code for Ashburn
 	•enter lhr as the region code for London
 	•enter phx as the region code for Phoenix
 
-The user name in the format <tenancy_name>/<username>\
+The user name in the format `<tenancy_name>/<username>`
 The password is the generated token.
-<region-code> is the code for the OCI region that you’re using. For example, the region code for Phoenix is phx. See Regions and Availability Domains.
+`<region-code>` is the code for the OCI region that you’re using. For example, the region code for Phoenix is phx. See Regions and Availability Domains.
 
 # Tag the image that you want to push to the registry:
-docker tag \
-       helidon-mp:latest \ 
-       <region-code>\.ocir.io/<tenancy-name>\/<repo-name>/<image-name>:<tag> 
+`docker tag helidon-mp:latest <region-code>.ocir.io/<tenancy-name>/<repo-name>/<image-name>:<tag>`
 	   
 The next step is to tag the helidon image we are going to push to the registry:
 
-$ docker tag helidon-mp:latest iad.ocir.io/<tenancy-name>/codecard/helidon-mp:latest
+$ `docker tag helidon-mp:latest iad.ocir.io/<tenancy-name>/codecard/helidon-mp:latest`
 
 the local image to tag <repo-name> is optional. It is the name of a repository to which you want to push the image (for example, project01).
 
 # Push the image to the Registry:
 
-$ docker push <region-code>.ocir.io/<tenancy-name>/<repo-name>/<image-name>:<tag>
+$ `docker push <region-code>.ocir.io/<tenancy-name>/<repo-name>/<image-name>:<tag>`
 
-$ docker push iad.ocir.io/<tenancy-name>/codecard/helidon-mp:latest
+$ `docker push iad.ocir.io/<tenancy-name>/codecard/helidon-mp:latest`
 
 You can pull your image with the image path used above, for example:  ia.ocir.io/helidon/example/helidon-mp:latest
 
@@ -71,27 +69,27 @@ $ kubectl create namespace helidon
 
 # Deploy the application
 
-$ kubectl create -f target/app.yaml -n helidon
+$ `kubectl create -f target/app.yaml -n helidon`
 
 # Get the NodePort number for your new pod
 
-$ kubectl get svc -n helidon
+$ `kubectl get svc -n helidon`
 
 # Get the External IP address for your cluster nodes
 
-$ kubectl get nodes
-$ kubectl describe node <NodeName>
+$ `kubectl get nodes`
+$ `kubectl describe node <NodeName>`
 
-You can now access the application at http://<NodeIpAddress>:<NodePort>/HelidonMp/<NAME>
+You can now access the application at `http://<NodeIpAddress>:<NodePort>/HelidonMp/<NAME>`
 
-$ curl http://<NodeExternalIpAddress>:<NodePort>/HelidonMP/Helidon
+$ `curl http://<NodeExternalIpAddress>:<NodePort>/HelidonMP/Helidon`
 
 {"template":"template1","title":"Hello Helidon!!","subtitle":"How are you?","bodytext":"This is my first Helidon Microservice from the oracle cloud using OKE","icon":"microservice","backgroundColor":"white"}
 
-$ curl -XGET http://NodeExternalIpAddress:NodePort/HelidonMP/Vinodh
+$ `curl -XGET http://NodeExternalIpAddress:NodePort/HelidonMP/Vinodh`
 
 {"template":"template1","title":"Hello Helidon!!","subtitle":"How are you?","bodytext":"This is my first Helidon Microservice from the oracle cloud using OKE","icon":"microservice","backgroundColor":"white"}
 
 To fetch customized data as template with user inputs to change title, subtitle, bodytext, icon, color.
 
-$ curl -XPUT -H "Content-Type: application/json" -d '{"title" : "Howdy", "subtitle", "bodytext" : "My updated Helidon MicroService", "icon": "java"}' http://NodeExternalIpAddress:NodePort/HelidonMP/Helidon
+$ `curl -XPUT -H "Content-Type: application/json" -d '{"title" : "Howdy", "subtitle", "bodytext" : "My updated Helidon MicroService", "icon": "java"}' http://NodeExternalIpAddress:NodePort/HelidonMP/Helidon`
