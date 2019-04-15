@@ -37,10 +37,10 @@ $ `docker login -u <username> -p <password> <region-code>.ocir.io`
 	   
 `<region-code>` corresponds to the code for the Oracle Cloud Infrastructure Registry region you're using, as follows:
 
-	1. enter <b>fra</b> as the region code for Frankfurt
-	2. enter <b>iad</b> as the region code for Ashburn
-	3. enter <b>lhr</b> as the region code for London
-	4. enter <b>phx</b> as the region code for Phoenix
+	1. enter <h6>fra as the region code for Frankfurt
+	2. enter <b>iad as the region code for Ashburn
+	3. enter <b>lhr as the region code for London
+	4. enter <b>phx as the region code for Phoenix
 
 The user name in the format `<tenancy_name>/<username>`
 The password is the generated token.
