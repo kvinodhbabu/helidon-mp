@@ -32,13 +32,13 @@ Sign in to the Oracle Cloud Infrastructure (OCI) web console and generate an aut
 Remember to copy the generated token. You won’t be able to access it again.
 
 # Log in to the OCIR Docker registry:
-$ docker login \
-       -u <username> \ 
-       -p <password> \ 
+$ docker login\
+       -u <username>\ 
+       -p <password>\ 
        <region-code>.ocir.io 
 	   
 
-<region-code> corresponds to the code for the Oracle Cloud Infrastructure Registry region you're using, as follows:
+<region-code>\ corresponds to the code for the Oracle Cloud Infrastructure Registry region you're using, as follows:
 	•enter fra as the region code for Frankfurt
 	•enter iad as the region code for Ashburn
 	•enter lhr as the region code for London
