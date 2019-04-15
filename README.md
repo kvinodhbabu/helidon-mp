@@ -37,7 +37,7 @@ $ `docker login -u <username> -p <password> <region-code>.ocir.io`
 	   
 `<region-code>` corresponds to the code for the Oracle Cloud Infrastructure Registry region you're using, as follows:
 
-	1. enter 'fra' as the region code for Frankfurt
+	1. enter `fra` as the region code for Frankfurt
 	2. enter 'iad' as the region code for Ashburn
 	3. enter 'lhr' as the region code for London
 	4. enter 'phx' as the region code for Phoenix
