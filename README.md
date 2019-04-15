@@ -7,7 +7,7 @@ A Guide to show you a few simple steps to create your own image and deploy helid
 The path that we will take is as follows:
 
 1. Deploy maven jar.
-2. Create OKE Cluster in Oracle Cloud Infrastructure.
+2. [Create OKE Cluster](https://www.oracle.com/webfolder/technetwork/tutorials/obe/oci/oke-full/index.html) in Oracle Cloud Infrastructure.
 3. Build Docker Image File.
 4. Tag & Push to OCIR.
 5. Pull the image from OCIR.
