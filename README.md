@@ -44,14 +44,14 @@ $ docker login \
 	•enter lhr as the region code for London
 	•enter phx as the region code for Phoenix
 
-The user name in the format <tenancy_name>/<username>.
+The user name in the format <tenancy_name>/<username>\
 The password is the generated token.
 <region-code> is the code for the OCI region that you’re using. For example, the region code for Phoenix is phx. See Regions and Availability Domains.
 
 # Tag the image that you want to push to the registry:
 docker tag \
        helidon-mp:latest \ 
-       <region-code>.ocir.io/<tenancy-name>/<repo-name>/<image-name>:<tag> 
+       <region-code>\.ocir.io/<tenancy-name>\/<repo-name>/<image-name>:<tag> 
 	   
 The next step is to tag the helidon image we are going to push to the registry:
 
