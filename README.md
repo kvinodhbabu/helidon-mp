@@ -29,23 +29,24 @@ $ `docker images`
 Your account must be in the Administrators group or another group that has the REPOSITORY_CREATE permission.
 
 Sign in to the Oracle Cloud Infrastructure (OCI) web console and generate an authentication token. See Getting an Auth Token.
+
 Remember to copy the generated token. You won’t be able to access it again.
 
 # Log in to the OCIR Docker registry:
 $ `docker login -u <username> -p <password> <region-code>.ocir.io`
 	   
 `<region-code>` corresponds to the code for the Oracle Cloud Infrastructure Registry region you're using, as follows:
-	1. enter <h6>fra</h6> as the region code for Frankfurt \
-	2. enter <h6>iad</h6> as the region code for Ashburn \
-	3. enter <h6>lhr</h6> as the region code for London \
-	4. enter <h6>phx</h6> as the region code for Phoenix \
+	1. enter <b>fra</b> as the region code for Frankfurt \
+	2. enter <b>iad</b> as the region code for Ashburn \
+	3. enter <b>lhr</b> as the region code for London \
+	4. enter <b>phx</b> as the region code for Phoenix 
 
 The user name in the format `<tenancy_name>/<username>`
 The password is the generated token.
 `<region-code>` is the code for the OCI region that you’re using. For example, the region code for Phoenix is phx. See Regions and Availability Domains.
 
-# Tag the image that you want to push to the registry:
-`docker tag helidon-mp:latest <region-code>.ocir.io/<tenancy-name>/<repo-name>/<image-name>:<tag>`
+# Tag the image that you want to push to the registry
+$ `docker tag helidon-mp:latest <region-code>.ocir.io/<tenancy-name>/<repo-name>/<image-name>:<tag>`
 	   
 The next step is to tag the helidon image we are going to push to the registry:
 
