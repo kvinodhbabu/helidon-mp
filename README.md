@@ -92,10 +92,10 @@ You can now access the application at http://<NodeIpAddress>:<NodePort>/HelidonM
 
 {"template":"template1","title":"Hello Helidon!!","subtitle":"How are you?","bodytext":"This is my first Helidon Microservice from the oracle cloud using OKE","icon":"microservice","backgroundColor":"white"}
 
-# curl -XGET http://"<NodeExternalIpAddress>:<NodePort>"/HelidonMP/Vinodh
+# curl -XGET http://NodeExternalIpAddress:NodePort/HelidonMP/Vinodh
 
 {"template":"template1","title":"Hello Helidon!!","subtitle":"How are you?","bodytext":"This is my first Helidon Microservice from the oracle cloud using OKE","icon":"microservice","backgroundColor":"white"}
 
 To fetch customized data as template with user inputs to change title, subtitle, bodytext, icon, color.
 
-# curl -XPUT -H "Content-Type: application/json" -d '{"title" : "Howdy", "subtitle", "bodytext" : "My updated Helidon MicroService", "icon": "java"}' http://"<NodeExternalIpAddress>:<NodePort>"/HelidonMP/Helidon
+# curl -XPUT -H "Content-Type: application/json" -d '{"title" : "Howdy", "subtitle", "bodytext" : "My updated Helidon MicroService", "icon": "java"}' http://NodeExternalIpAddress:NodePort/HelidonMP/Helidon
