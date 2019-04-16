@@ -80,6 +80,7 @@ $ `kubectl get svc -n helidon`
 # Get the External IP address for your cluster nodes
 
 $ `kubectl get nodes`
+
 $ `kubectl describe node <NodeName>`
 
 You can now access the application at `http://<NodeIpAddress>:<NodePort>/HelidonMp/<NAME>`
