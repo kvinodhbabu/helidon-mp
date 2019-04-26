@@ -61,7 +61,7 @@ $ `docker push <region-code>.ocir.io/<tenancy-name>/<repo-name>/<image-name>:<ta
 
 $ `docker push iad.ocir.io/<tenancy-name>/codecard/helidon-mp:latest`
 
-You can pull your image with the image path used above, for example:  `ia.ocir.io/helidon/example/helidon-mp:latest`
+You can pull your image with the image path used above, for example:  `iad.ocir.io/helidon/example/helidon-mp:latest`
 
 Within the Registry UI you will see the newly created repository. By default, the repository will be set to private. If you would like to continue with a private repository, you will have to add an image pull secret which allows Kubernetes to authenticate with a container registry to pull a private image. 
 
