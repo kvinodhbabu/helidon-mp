@@ -91,7 +91,7 @@ $ `curl http://<NodeExternalIpAddress>:<NodePort>/HelidonMP/Helidon`
 
 $ `curl -XGET http://NodeExternalIpAddress:NodePort/HelidonMP/Vinodh`
 
-{"template":"template1","title":"Hello Helidon!!","subtitle":"How are you?","bodytext":"This is my first Helidon Microservice from the oracle cloud using OKE","icon":"microservice","backgroundColor":"white"}
+{"template":"template1","title":"Hello Helidon!!","subtitle":"How are you?","bodytext":"This is my first Helidon Microservice from the Oracle cloud using OKE","icon":"microservice","backgroundColor":"white"}
 
 To fetch customized data as template with user inputs to change title, subtitle, bodytext, icon, color.
 
