@@ -87,7 +87,7 @@ You can now access the application at `http://<NodeIpAddress>:<NodePort>/Helidon
 
 $ `curl http://<NodeExternalIpAddress>:<NodePort>/HelidonMP/Helidon`
 
-{"template":"template1","title":"Hello Helidon!!","subtitle":"How are you?","bodytext":"This is my first Helidon Microservice from the oracle cloud using OKE","icon":"microservice","backgroundColor":"white"}
+{"template":"template1","title":"Hello Helidon!!","subtitle":"How are you?","bodytext":"This is my first Helidon Microservice from the Oracle cloud using OKE","icon":"microservice","backgroundColor":"white"}
 
 $ `curl -XGET http://NodeExternalIpAddress:NodePort/HelidonMP/Vinodh`
 
